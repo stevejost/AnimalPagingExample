@@ -1,0 +1,25 @@
+﻿@model AnimalIndexViewModel
+<div>
+    <h1>Animals</h1>
+</div>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Number Legs</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var animal in @Model.Animals) {
+                <tr>
+                    <td>@animal.Name</td>
+                    <td>@animal.Type</td>
+                    <td>@animal.NumLegs</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <partial name="_Pager" for="PagingModel" />    
+</div>
